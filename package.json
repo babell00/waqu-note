@@ -1,0 +1,19 @@
+{
+  "name": "waqu-note",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron-webpack dev"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^2.0.6",
+    "electron-webpack": "^2.1.2",
+    "vue": "^2.5.17",
+    "vue-loader": "^15.2.6",
+    "vue-template-compiler": "^2.5.17",
+    "webpack": "^4.16.4"
+  }
+}
