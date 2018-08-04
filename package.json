@@ -4,16 +4,23 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "electron-webpack dev"
+    "start": "electron-webpack dev",
+    "build": "electron-webpack && electron-builder"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "electron": "^2.0.6",
+    "electron-builder": "^20.26.1",
     "electron-webpack": "^2.1.2",
+    "path": "^0.12.7",
+    "url": "^0.11.0",
     "vue": "^2.5.17",
     "vue-loader": "^15.2.6",
     "vue-template-compiler": "^2.5.17",
     "webpack": "^4.16.4"
+  },
+  "dependencies": {
+    "source-map-support": "^0.5.6"
   }
 }
