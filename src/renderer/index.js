@@ -1,8 +1,9 @@
 import Vue from 'vue';
-import App from './App';
+import App from './App.vue';
+
 new Vue({
     el: '#app',
-    render(h) {
-        return h('h1', 'dupa');
+    render(run) {
+        return run(App)
     }
 });
