@@ -13,6 +13,7 @@
     "electron": "^2.0.6",
     "electron-builder": "^20.26.1",
     "electron-webpack": "^2.1.2",
+    "events": "^3.0.0",
     "path": "^0.12.7",
     "url": "^0.11.0",
     "vue": "^2.5.17",
