@@ -5,5 +5,5 @@ import WaquApplication from './WaquApplication'
 
 
 app.on('ready', () => {
-  new WaquApplication()
-})
+  new WaquApplication();
+});
