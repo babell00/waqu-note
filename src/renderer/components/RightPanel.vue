@@ -14,7 +14,7 @@ export default {
 <style>
 .rightPanel {
   height: 100vh;
-  background-color: #ffdc00;
+  background-color: #F5D76E;
   margin: auto;
   flex-grow: 5;
 }

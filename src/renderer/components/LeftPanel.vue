@@ -5,33 +5,59 @@
   </div>
 
   <ul class="tagItems">
-    <li class="tagItem" v-for="tag in tags" :key="`${tag}`" v-on:click="tagSelected(tag)">
-      <span class="">#{{tag}}</span>
+    <li class="tagItem" v-for="tag in tags" :key="`${tag}`" @click="tagSelected(tag)">
+      <span v-bind:class="{ tagSelected: tag.name === selectedTag }"> #{{tag.name}}</span>
     </li>
   </ul>
 </div>
 </template>
 
 <script>
-import { ipcRenderer } from 'electron'
+import { ipcRenderer } from "electron";
 
 export default {
   name: "LeftPanel",
   data() {
     return {
-      tags:['ALL', 'Python', 'java', 'kotlin', 'PHP', 'React', 'pabianice']
-    }
+      selectedTag: "ALL",
+      tags: [
+        {
+          name: "ALL"
+        },
+        {
+          name: "Python"
+        },
+        {
+          name: "java"
+        },
+        {
+          name: "kotlin"
+        },
+        {
+          name: "PHP"
+        },
+        {
+          name: "Dupa"
+        },
+        {
+          name: "pabianice"
+        },
+        {
+          name: "praca"
+        }
+      ]
+    };
   },
   methods: {
-    tagSelected: function(tag){
-      ipcRenderer.send('leftPanel:tagSelected', tag);
+    tagSelected: function(tag) {
+      this.selectedTag = tag.name;
+      ipcRenderer.send("leftPanel:tagSelected", tag);
     }
   }
 };
 
-ipcRenderer.on('app:tagNotesLoad', (event, tag) => {
+ipcRenderer.on("app:tagNotesLoad", (event, tag) => {
   console.log(tag);
-  alert(tag);
 });
 </script>
 
@@ -39,7 +65,7 @@ ipcRenderer.on('app:tagNotesLoad', (event, tag) => {
 <style>
 .leftPanel {
   height: 100vh;
-  background-color: #001f3f;
+  background-color: #446cb3;
   flex-grow: 1;
 }
 .leftPanelHeader {
