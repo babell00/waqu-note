@@ -38,6 +38,10 @@ body {
     background-color: #21252b;
 }
 
+ul {
+  list-style-type: none;
+}
+
 .workspace {
 }
 

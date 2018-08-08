@@ -1,4 +1,4 @@
-import { BrowserWindow } from 'electron'
+import { BrowserWindow, ipcMain } from 'electron'
 import { EventEmitter } from 'events'
 import { format as formatUrl } from 'url'
 import path from 'path'
@@ -9,6 +9,8 @@ export default class MainWindow extends EventEmitter {
         super();
         this.isDev = process.env.NODE_ENV !== 'production';
         this.mainWindow = this.createMainWindow();
+
+        this.handleEvents();
     }
 
     createMainWindow() {
@@ -28,5 +30,15 @@ export default class MainWindow extends EventEmitter {
                 slashes: true
             }));
         }
+
+        return window;
+    }
+
+
+    handleEvents(){
+        ipcMain.on('leftPanel:tagSelected', (event, tag) => {
+            console.log(`SELECT * FROM notes WHERE tag = "${tag}" ORDER BY modify_date DESC`);
+            this.mainWindow.send('app:tagNotesLoad', tag);
+        });
     }
 }
