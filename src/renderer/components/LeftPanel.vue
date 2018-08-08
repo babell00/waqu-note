@@ -6,13 +6,16 @@
 
 <script>
 export default {
-    name: 'LeftPanel'
+  name: "LeftPanel"
 };
 </script>
 
 
 <style>
 .leftPanel {
-    background-color: #2C3E50;
+  height: 100vh;
+  background-color: #01ff70;
+  margin: auto;
+  flex-grow: 1;
 }
 </style>

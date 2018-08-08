@@ -1,6 +1,6 @@
 <template>
     <div class="workspace">
-        <div class="wrapper">
+        <div class="panelWrapper">
             <LeftPanel /><MiddlePanel /><RightPanel />
         </div>
     </div>
@@ -31,21 +31,18 @@ export default {
     padding: 0;
     font-family: system-ui;
     font-size: 12px;
-    line-height: 1.428571429;
     color: #9da5b4;
-    background-color: #21252b;
 }
 
 body {
-    background-color: #446CB3;
+    background-color: #21252b;
 }
 
 .workspace {
-    display: flex;
-    flex-direction: column;
 }
 
-.wrapper {
-    flex: 1 0 auto;
+.panelWrapper {
+    display: flex;
+    flex-direction: row;
 }
 </style>

@@ -6,13 +6,16 @@
 
 <script>
 export default {
-    name: 'MiddlePanel'
+  name: "MiddlePanel"
 };
 </script>
 
 
 <style>
 .middlePanel {
-    background-color: #336E7B;
+  height: 100vh;
+  background-color: #7fdbff;
+  margin: auto;
+  flex-grow: 2;
 }
 </style>

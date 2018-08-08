@@ -6,13 +6,16 @@
 
 <script>
 export default {
-    name: 'RightPanel'
+  name: "RightPanel"
 };
 </script>
 
 
 <style>
 .rightPanel {
-    background-color: #3A539B;
+  height: 100vh;
+  background-color: #ffdc00;
+  margin: auto;
+  flex-grow: 5;
 }
 </style>
