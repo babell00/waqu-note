@@ -1,6 +1,6 @@
 <template>
 <div class="middlePanel">
-    <p> middle </p>
+  <p>hm....</p>
 </div>
 </template>
 
@@ -16,6 +16,7 @@ export default {
   height: 100vh;
   background-color: #7fdbff;
   margin: auto;
-    flex: 0 0 250px;
+  flex: 0 0 250px;
 }
+
 </style>

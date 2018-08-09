@@ -94,10 +94,6 @@ window.addEventListener('contextmenu', (e) => {
   display: block;
   padding: 5px 5px 5px 10px;
   color: #d7dae0;
-  
-
-  /* for debbuging */
-  border: 1px dashed red;
 }
 
 .tagGroupName * {
@@ -112,9 +108,6 @@ window.addEventListener('contextmenu', (e) => {
 .tagItem {
   flex: 1;
   padding: 5px 5px 5px 13px;
-
-  /* for debbuging */
-  border: 1px dashed red;
 }
 
 .tagSelected {

@@ -35,7 +35,7 @@ export default {
 }
 
 body {
-    background-color: #21252b;
+    background-color: #ffffff;
 }
 
 ul {
