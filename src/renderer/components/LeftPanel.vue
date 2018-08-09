@@ -82,7 +82,7 @@ window.addEventListener('contextmenu', (e) => {
 <style>
 .leftPanel {
   height: 100vh;
-  background-color: #446cb3;
+  background-color: #34495e;
   flex: 0 0 150px;
 }
 .leftPanelHeader {

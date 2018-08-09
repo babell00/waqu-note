@@ -15,7 +15,6 @@ export default {
 
 <style>
 .rightPanel {
-  background-color: blue;
   flex-grow: 5;
 }
 
@@ -29,14 +28,14 @@ export default {
 
 textarea {
   flex: 1;
-  
   border: none;
   resize: none;
   outline: none;
-  background-color: #f6f6f6;
-  font-size: 14px;
-  font-family: 'Monaco', courier, monospace;
-  color: #253444;
+  background-color: #34495e;
+  border-left: 2px solid #7f8c8d;
+  font-size: 15px;
+  font-family: 'Helvetica', courier, monospace;
+  color: #ecf0f1;
   padding: 20px;
 }
 </style>
