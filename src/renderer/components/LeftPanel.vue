@@ -1,20 +1,21 @@
 <template>
 <div class="leftPanel">
   <div class="leftPanelHeader">
-    <span class="tagGroupName">tags</span>
+    <p><span class="tagGroupName">tags</span></p>
   </div>
 
   <ul class="tagItems">
     <li class="tagItem" v-for="tag in tags" :key="`${tag}`" @click="tagSelected(tag)">
-      <span v-bind:class="{ tagSelected: tag.name === selectedTag }"> #{{tag.name}}</span>
+      <p><span v-bind:class="{ tagSelected: tag.name === selectedTag }">#{{tag.name}}</span></p>
     </li>
   </ul>
 </div>
 </template>
 
 <script>
-import { ipcRenderer } from "electron";
+import { ipcRenderer, remote } from "electron";
 
+const {Menu, MenuItem} = remote;
 export default {
   name: "LeftPanel",
   data() {
@@ -59,6 +60,22 @@ export default {
 ipcRenderer.on("app:tagNotesLoad", (event, tag) => {
   console.log(tag);
 });
+
+window.addEventListener('contextmenu', (e) => {
+            e.preventDefault()
+            if(e.path[0].className === 'leftPanel'){
+                 const menu = new Menu();
+                  menu.append(new MenuItem ({
+                    label: 'Add new tag',
+                    click() { 
+                 
+    
+                    }
+                    
+         }))
+          menu.popup(remote.getCurrentWindow())
+            }
+         }, false);
 </script>
 
 
@@ -66,7 +83,7 @@ ipcRenderer.on("app:tagNotesLoad", (event, tag) => {
 .leftPanel {
   height: 100vh;
   background-color: #446cb3;
-  flex-grow: 1;
+  flex: 0 0 150px;
 }
 .leftPanelHeader {
   font-weight: normal;
@@ -77,9 +94,14 @@ ipcRenderer.on("app:tagNotesLoad", (event, tag) => {
   display: block;
   padding: 5px 5px 5px 10px;
   color: #d7dae0;
+  
 
   /* for debbuging */
   border: 1px dashed red;
+}
+
+.tagGroupName * {
+    font-family: Verdana;
 }
 
 .tagItems {

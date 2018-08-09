@@ -16,6 +16,6 @@ export default {
   height: 100vh;
   background-color: #7fdbff;
   margin: auto;
-  flex-grow: 2;
+    flex: 0 0 250px;
 }
 </style>

@@ -7,4 +7,5 @@ export default class WaquApplication extends EventEmitter {
         super();
         this.mainWindow = new MainWindow();
     }
+
 }
